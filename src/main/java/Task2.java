@@ -17,18 +17,12 @@ public class Task2 {
             if (str.contains("country")) str_form.append(str_form = new StringBuilder(str_form.toString().replace("\"country\"", "country ")));
             if (str.contains("city")) str_form.append(str_form = new StringBuilder(str_form.toString().replace("\"city\"", "city ")));
         }
-
-//        str_form = new StringBuilder(str_form.toString().replace(":", "="));
-//        str_form = new StringBuilder(str_form.toString().replaceAll("\"", "'"));
-//        str_form = new StringBuilder(str_form.toString().replaceAll("' ", "' AND "));
+        str_form = new StringBuilder(str_form.toString().replace(":", "="));
+        str_form = new StringBuilder(str_form.toString().replace("\"", "'"));
+        str_form = new StringBuilder(str_form.toString().replace("' ", "' AND "));
         String result = str_form.toString();
-//        String answer = String.join(" ", req, result);
-//        System.out.println(answer);
-        System.out.println(result);
-
-
-
+        String answer = String.join(" ", req, result);
+        System.out.println(answer);
 
     }
-
 }
