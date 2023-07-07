@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
 import java.util.Random;
 import java.util.Collections;
 public class Task3 {
@@ -17,13 +16,9 @@ public class Task3 {
             numbers.add(rnd.nextInt(100));
         }
         System.out.println("numbers: " + numbers);
-        Iterator<Integer> even = numbers.iterator();
-        while (even.hasNext()) {
-            int number = even.next();
-            if (number % 2 == 0) {
-                even.remove();
-            }
-        }
+
+        numbers.removeIf(number -> number % 2 == 0);
+
         System.out.println("odd numbers: " + numbers);
         Integer max = Collections.max(numbers);
         System.out.println("max numbers: " + max);
