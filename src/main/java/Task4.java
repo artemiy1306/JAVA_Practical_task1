@@ -34,7 +34,6 @@ public class Task4 {
             System.out.printf("%s %s.%s. %s %s\n", surname.get(i), name.get(i).toUpperCase().charAt(0),
                     patronymic.get(i).toUpperCase().charAt(0), sex.get(i), age.get(i));
         }
-        // Реализация сортировки по возрасту
         System.out.println("сортировать по возрасту да/нет: ");
         String select = scanner.nextLine();
         if (select.toLowerCase().contains("да")) {
@@ -48,7 +47,7 @@ public class Task4 {
             System.out.println("выполнить сортировку по возрасту и полу да/нет: ");
             String sel = scanner.nextLine();
             if (sel.toLowerCase().contains("да")) {
-              //сортируем сначало по полу потом по возрасту
+              //сортируем сначала по полу потом по возрасту
                 id.sort(new Comparator<Integer>() {
                         @Override
                         public int compare(Integer o1, Integer o2) {
